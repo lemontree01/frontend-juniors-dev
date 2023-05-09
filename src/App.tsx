@@ -3,7 +3,7 @@ import "./styles/index.scss"
 
 const App = () => {
   return (
-    <div>Apdsaasdp</div>
+    <div>Hello</div>
   )
 }
 
