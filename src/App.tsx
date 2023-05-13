@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/index.scss";
-import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/NavBar";
 import AppRoutes from "./routes/AppRoutes";
 import Footer from "./components/Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,11 +13,11 @@ export const useAppSelector: TypedUseSelectorHook<RootState> =
 
 const App = () => {
   return (
-    <div>
-      <Header />
+    <>
+      <Navbar />
       <AppRoutes />
       <Footer />
-    </div>
+    </>
   );
 };
 
