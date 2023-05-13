@@ -1,4 +1,38 @@
 .anime-card {
   width: 282px;
-  height: 418px;
+  height: 372px;
+  color: $primary;
+  @include regular-text;
+  position: relative;
+  z-index: 1;
+
+  &__wrapper {
+    width: 282px;
+    height: 372px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 46.1%,
+      rgba(0, 0, 0, 0.7) 87.77%
+    );
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    position: relative;
+
+    img {
+      border-radius: 8px;
+      width: 282px;
+      height: 372px;
+      z-index: -1;
+      position: absolute;
+    }
+  }
+
+  &__episode {
+    margin: 14px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__name {
+    margin-top: 13px;
+  }
 }
