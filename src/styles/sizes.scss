@@ -1,0 +1,17 @@
+@mixin regular-text {
+  font-size: 24px;
+  line-height: 33px;
+}
+
+@mixin h2 {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+$container-width: 1000px;
+
+@mixin sub-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+}
