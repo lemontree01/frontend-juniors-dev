@@ -5,6 +5,7 @@ import Catalog from '../pages/Catalog/Catalog'
 import Collections from '../pages/Collections/Collections'
 import AnimePage from '../pages/AnimePage/AnimePage'
 import Profile from '../pages/Profile/Profile'
+import Login from '../pages/Login/Login'
 
 const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
       <Route path="/collections" element={<Collections/>}/> 
       <Route path="/anime-page" element={<AnimePage/>}/> 
       <Route path="/profile" element={<Profile/>}/> 
+      <Route path="/login" element={<Login />}/>
       <Route path="*" element={<Navigate to="/main"/>}/>
     </Routes>
   )
