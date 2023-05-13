@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimeStatus } from "../AnimeStatus/AnimeStatus";
-import "./CatalogueCard.scss";
+import "./catalogueCard.scss";
 
 type CatalogueCardProps = {
   img?: string;
