@@ -1,5 +1,5 @@
 import React from "react";
-import "./header.scss";
+import "./navbar.scss";
 import Logo from "../../assets/logo.svg";
 import Glass from "../../assets/search-glass.svg";
 import Switcher from "../../assets/theme-switcher.svg";

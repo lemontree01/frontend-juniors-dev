@@ -1,5 +1,18 @@
-.main {
- display: flex;
- justify-content: center; 
- padding: 50px;
+@import "../../styles/colors.scss";
+
+.main-page {
+
+}
+
+.lastly-uploaded {
+
+  &__anime-wrapper {
+    max-width: $container-width;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    height: 450px;
+    margin-top: 32px;
+  }
 }
