@@ -6,7 +6,7 @@ import Collections from "../pages/Collections/Collections";
 import AnimePage from "../pages/AnimePage/AnimePage";
 import Profile from "../pages/Profile/Profile";
 import Login from "../pages/Login/Login";
-import TopPage from "../pages/Main/TopPage";
+import TopPage from "../pages/TopPage/TopPage";
 
 const AppRoutes = () => {
   return (

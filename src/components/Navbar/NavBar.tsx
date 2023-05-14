@@ -4,7 +4,7 @@ import Logo from "../../assets/logo.svg";
 import Glass from "../../assets/search-glass.svg";
 import Switcher from "../../assets/theme-switcher.svg";
 import { useNavigate } from "react-router";
-import ButtonUI from "../../UI/ButtonUI/ButtonUI";
+import ButtonUI from "../ui/ButtonUI/ButtonUI";
 
 const Header = () => {
   const navigate = useNavigate();
