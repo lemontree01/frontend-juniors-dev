@@ -3,11 +3,13 @@ import "./navbar.scss";
 import Logo from "../../assets/logo.svg";
 import Glass from "../../assets/search-glass.svg";
 import Switcher from "../../assets/theme-switcher.svg";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import ButtonUI from "../ui/ButtonUI/ButtonUI";
 
 const Header = () => {
   const navigate = useNavigate();
+
+  const location = useLocation();
 
   return (
     <div className="navbar">
@@ -18,9 +20,34 @@ const Header = () => {
       />
 
       <div className="navbar__selections">
-        <span onClick={() => navigate("/catalog")}>Каталог</span>
-        <span onClick={() => navigate("/top-page")}>Топ-100</span>
-        <span onClick={() => navigate("/collections")}>
+        <span
+          className={
+            location.pathname === "/catalog"
+              ? "navbar__active-page"
+              : "navbar__innactive-page"
+          }
+          onClick={() => navigate("/catalog")}
+        >
+          Каталог
+        </span>
+        <span
+          className={
+            location.pathname === "/top-page"
+              ? "navbar__active-page"
+              : "navbar__innactive-page"
+          }
+          onClick={() => navigate("/top-page")}
+        >
+          Топ-100
+        </span>
+        <span
+          className={
+            location.pathname === "/collections"
+              ? "navbar__active-page"
+              : "navbar__innactive-page"
+          }
+          onClick={() => navigate("/collections")}
+        >
           Коллекции
         </span>
       </div>
@@ -32,7 +59,10 @@ const Header = () => {
       <div className="navbar__btns">
         <div className="navbar__auth_btns">
           <ButtonUI
-            style={{ padding: "12px 22px" }}
+            style={{
+              padding: "12px 22px",
+              border: "1.5px solid #F2EFFF",
+            }}
             variant="outlined"
           >
             Войти
