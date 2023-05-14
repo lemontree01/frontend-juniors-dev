@@ -6,6 +6,7 @@ import { toggleTheme } from "../../store/features/themeSlice";
 const Main = () => {
   const { color } = useAppSelector((state) => state.theme);
   const dispatch = useAppDispatch();
+
   return (
     <div className="main">
       Main <span>{color}</span>{" "}
