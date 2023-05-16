@@ -1,5 +1,6 @@
 .footer {
-  padding: 38px 120px;
+  padding: 38px 150px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,17 +15,17 @@
   }
 
   &__right {
-    width: 350px;
+    // width: 350px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   &__contacts {
-    width: 42%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 16px;
 
     input {
       background-color: #fff;
@@ -54,5 +55,18 @@
       transition: 0.5s;
       background-color: #3a23d4;
     }
+  }
+  &__center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
   }
 }
