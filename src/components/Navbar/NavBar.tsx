@@ -1,9 +1,10 @@
 import React from "react";
 import "./navbar.scss";
 import Logo from "../../assets/logo.svg";
-import Glass from "../../assets/search-glass.png";
-import Switcher from "../../assets/theme-switcher.png";
+import Glass from "../../assets/search-glass.svg";
+import Switcher from "../../assets/theme-switcher.svg";
 import { useNavigate } from "react-router";
+import ButtonUI from "../ui/ButtonUI/ButtonUI";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -16,16 +17,34 @@ const Header = () => {
         alt="logo-img"
       />
 
-      <span onClick={() => navigate("/catalog")}>Каталог</span>
-      <span onClick={() => navigate("/main")}>Топ-100</span>
-      <span onClick={() => navigate("/collections")}>Коллекции</span>
+      <div className="navbar__selections">
+        <span onClick={() => navigate("/catalog")}>Каталог</span>
+        <span onClick={() => navigate("/top-page")}>Топ-100</span>
+        <span onClick={() => navigate("/collections")}>
+          Коллекции
+        </span>
+      </div>
+
       <div className="navbar__search_input">
         <input placeholder="Поиск" type="text" />
         <img id="navbar__search_btn" src={Glass} alt="glass-img" />
       </div>
-      <button id="navbar__signIn_btn">Войти</button>
-      <button id="navbar__signUp_btn">Регистрация</button>
-      <img id="navbar__switch_btn" src={Switcher} alt="switch-img" />
+      <div className="navbar__btns">
+        <div className="navbar__auth_btns">
+          <ButtonUI
+            style={{ padding: "12px 22px" }}
+            variant="outlined"
+          >
+            Войти
+          </ButtonUI>
+          <ButtonUI>Регистрация</ButtonUI>
+        </div>
+        <img
+          id="navbar__switch_btn"
+          src={Switcher}
+          alt="switch-img"
+        />
+      </div>
     </div>
   );
 };
