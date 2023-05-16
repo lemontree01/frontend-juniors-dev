@@ -18,12 +18,14 @@ const Footer = () => {
           src={Logo}
           alt="logo-img"
         />
-        <span onClick={() => navigate('/anime-page')}>anime</span>
-        <span>Топ-100</span>
+      </div>
+      <div className='footer__center'>
+        <span onClick={() => navigate('/catalog')}>Каталог</span>  
+        <span onClick={() => navigate('/top-100')}>Топ-100</span>
+        <span onClick={() => navigate('/collections')}>Коллекция</span>
       </div>
       <div className='footer__contacts'>
-        <input onChange={handleEmail} type="text" placeholder='Gmail' />
-        <button>Send</button>
+        <p>©2023 Animeon</p>
       </div>
     </div>
   )
