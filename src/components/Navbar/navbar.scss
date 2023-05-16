@@ -11,6 +11,12 @@
   button {
     cursor: pointer;
   }
+  .navbar__selections {
+    width: 26.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .navbar__search_input {
     width: 32%;
     padding: 10px 15px;
@@ -30,21 +36,15 @@
       font-size: 16px;
     }
   }
-  button {
-    padding: 14px 0px;
-    font-size: 16px;
-    border-radius: 15px;
+  .navbar__btns {
+    width: 23%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  #navbar__signIn_btn {
-    width: 7.6%;
-    color: #f2efff;
-    border: 1px solid #f2efff;
-    background-color: transparent;
-  }
-  #navbar__signUp_btn {
-    width: 10.6%;
-    color: white;
-    border: none;
-    background-color: #6047ff;
+  .navbar__auth_btns {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
   }
 }

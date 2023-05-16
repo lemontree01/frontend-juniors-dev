@@ -1,0 +1,21 @@
+.ui__btn_variant-outlined-choose,
+.active {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.ui__btn_variant-outlined-choose {
+  color: #f2efff;
+  background-color: transparent;
+  border: 2px solid #f2efff;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.active {
+  background-color: #f2efff;
+  border: 2px solid #f2efff;
+  border-radius: 20px;
+  color: #16171f;
+  transition: 0.5s;
+}

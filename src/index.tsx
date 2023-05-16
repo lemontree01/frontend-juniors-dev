@@ -12,7 +12,9 @@ const root = createRoot(rootEl);
 root.render(
   <BrowserRouter>
     <Provider store={store}>
-      <GoogleOAuthProvider clientId={process.env.SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ?? ""}>
+      <GoogleOAuthProvider
+        clientId={process.env.SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ?? ""}
+      >
         <App />
       </GoogleOAuthProvider>
     </Provider>
