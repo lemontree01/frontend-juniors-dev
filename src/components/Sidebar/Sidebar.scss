@@ -1,0 +1,102 @@
+.catalog__content_sidebar {
+  width: 28%;
+
+  .sidebar__filter_title {
+    color: white;
+    font-weight: 700;
+    font-size: 32px;
+    display: flex;
+    margin-bottom: 32px;
+
+    div {
+      background-color: #f2efff;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      margin-right: 20px;
+    }
+  }
+
+  .sidebar__filter_date {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 40px;
+
+    span {
+      color: white;
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .sidebar__filter_genres {
+    span {
+      color: white;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    .genres__wrapper {
+      margin-top: 20px;
+      div {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .sidebar__filter_format {
+    margin-top: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    div {
+      margin-top: 20px;
+    }
+  }
+
+  .sidebar__filter_status {
+    margin-top: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    div {
+      margin-top: 20px;
+    }
+  }
+
+  .sidebar__filter_age-rate {
+    margin-top: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    div {
+      margin-top: 20px;
+    }
+  }
+  .sidebar__filter_dub {
+    margin-top: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    div {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  .sidebar__filter_btns {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 20px;
+  }
+}

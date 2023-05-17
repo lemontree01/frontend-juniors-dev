@@ -1,5 +1,6 @@
 button {
   cursor: pointer;
+  margin: 5px;
 }
 
 .ui__btn_variant-default {
@@ -34,6 +35,12 @@ button {
 
 .ui__btn_size-big {
   padding: 12px 87px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.ui__btn_size-medium {
+  padding: 10px 40px;
   font-weight: 600;
   font-size: 24px;
 }

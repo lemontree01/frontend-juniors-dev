@@ -1,7 +1,8 @@
 import React from "react";
+import ButtonUI from "../../components/ui/ButtonUI/ButtonUI";
 
 const TopPage = () => {
-  return <div>TopPage</div>;
+  return <div></div>;
 };
 
 export default TopPage;

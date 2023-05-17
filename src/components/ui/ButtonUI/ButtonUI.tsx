@@ -25,6 +25,8 @@ const ButtonUI: FC<PropsWithChildren<ButtonProps>> = ({
   const checkButtonAttributes = () => {
     if (size === "big") {
       setProportion("ui__btn_size-big");
+    } else if (size === "medium") {
+      setProportion("ui__btn_size-medium");
     } else {
       setProportion("ui__btn_size-default");
     }
