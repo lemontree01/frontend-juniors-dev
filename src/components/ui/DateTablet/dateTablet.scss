@@ -1,0 +1,25 @@
+.date-tablet {
+  cursor: pointer;
+  width: 162px;
+  height: 61px;
+  background: #16171F;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  .day {
+
+  }
+
+  .date {
+  }
+
+}
+
+.selected {
+  background: rgba(96, 71, 255, 1);
+}

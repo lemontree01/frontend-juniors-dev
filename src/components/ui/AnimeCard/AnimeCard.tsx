@@ -1,6 +1,7 @@
 import React from "react";
 import "./animeCard.scss";
 
+
 type AnimeCardProps = {
   img?: string;
   name: string;

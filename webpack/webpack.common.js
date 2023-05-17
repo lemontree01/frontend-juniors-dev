@@ -23,7 +23,7 @@ module.exports = {
       options: {
         sassResources: [path.resolve(__dirname, "../src/styles/color.scss")],
       },
-    })
+    }),
   ],
   module: {
     rules: [
@@ -55,7 +55,10 @@ module.exports = {
           {
             loader: "sass-resources-loader",
             options: {
-              resources: [path.resolve(__dirname, "../src/styles/colors.scss"), path.resolve(__dirname, "../src/styles/sizes.scss")],
+              resources: [
+                path.resolve(__dirname, "../src/styles/colors.scss"),
+                path.resolve(__dirname, "../src/styles/sizes.scss"),
+              ],
             },
           },
         ],
