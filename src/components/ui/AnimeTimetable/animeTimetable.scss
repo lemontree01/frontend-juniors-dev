@@ -1,0 +1,45 @@
+.anime-timetable {
+  background-color: rgba(22, 23, 31, 1);
+  border-radius: 20px;
+  margin-top: 14px;
+  padding: 46px;
+  display: flex;
+  flex-direction: column;
+  &__wrapper {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 31px;
+  }
+
+  &__wrapper:not(:last-child) {
+    border-bottom: 1px solid #3d3d3d;
+  }
+
+  .time {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 35px;
+    color: white;
+  }
+
+  .episode {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    .name {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 33px;
+      color: #ffffff;
+    }
+    .episode-number {
+      color: rgba(166, 166, 166, 1);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+}

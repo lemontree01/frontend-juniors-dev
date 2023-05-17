@@ -1,26 +1,29 @@
 .anime-card {
-  width: 282px;
-  height: 372px;
+  cursor: pointer;
+  width: 15rem;
+  height: 20rem;
   color: $primary;
   @include regular-text;
+  line-height: 22px;
+  font-size: 18px;
   position: relative;
   z-index: 1;
 
   &__wrapper {
-    width: 282px;
-    height: 372px;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 46.1%,
-      rgba(0, 0, 0, 0.7) 87.77%
-    );
+    width: 15rem;
+    height: 20rem;
+    // background: linear-gradient(
+    //   180deg,
+    //   rgba(0, 0, 0, 0) 46.1%,
+    //   rgba(0, 0, 0, 0.7) 87.77%
+    // );
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     position: relative;
 
     img {
       border-radius: 8px;
-      width: 282px;
-      height: 372px;
+      width: 15rem;
+      height: 20rem;
       z-index: -1;
       position: absolute;
     }
@@ -33,6 +36,6 @@
   }
 
   &__name {
-    margin-top: 13px;
+    margin-top: 1rem;
   }
 }
