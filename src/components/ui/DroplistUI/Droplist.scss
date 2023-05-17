@@ -1,0 +1,18 @@
+.droplist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 233px;
+  height: 65px;
+  background-color: #16171f;
+  border-radius: 20px;
+  cursor: pointer;
+  .droplist__title {
+    font-weight: 600;
+    font-size: 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
