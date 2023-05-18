@@ -1,0 +1,17 @@
+.collections {
+  
+  margin: 0 auto;
+
+
+  &__wrapper {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    img {
+      width: 30%;
+    }
+  }
+  margin-bottom: 20px;
+}
