@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./main.scss";
 import Header from "../../components/ui/Header/Header";
 import IdolChild from "../../assets/asd.jpg";
@@ -25,7 +25,7 @@ const moveRight = () => {};
 const Main = () => {
 
   const navigate = useNavigate()
-
+  const [activeDay, setActiveDay] = useState(1)
   const animeTimes: {
     time: string;
     name: string;
@@ -103,13 +103,13 @@ const Main = () => {
       <section className="main-page__relase-date release-date">
         <Header>Дата выхода аниме</Header>
         <div className="release-date__days">
-          <DateTablet isSelected={true} date="15 мая" day="понедельник" />
-          <DateTablet isSelected={false} date="16 мая" day="вторник" />
-          <DateTablet isSelected={false} date="17 мая" day="среда" />
-          <DateTablet isSelected={false} date="18 мая" day="четверг" />
-          <DateTablet isSelected={false} date="19 мая" day="пятница" />
-          <DateTablet isSelected={false} date="20 мая" day="суббота" />
-          <DateTablet isSelected={false} date="21 мая" day="воскресенье" />
+          <DateTablet onClick={()=>setActiveDay(1)} isSelected={activeDay === 1} date="15 мая" day="понедельник" />
+          <DateTablet onClick={()=>setActiveDay(2)} isSelected={activeDay === 2} date="16 мая" day="вторник" />
+          <DateTablet onClick={()=>setActiveDay(3)} isSelected={activeDay === 3} date="17 мая" day="среда" />
+          <DateTablet onClick={()=>setActiveDay(4)} isSelected={activeDay === 4} date="18 мая" day="четверг" />
+          <DateTablet onClick={()=>setActiveDay(5)} isSelected={activeDay === 5} date="19 мая" day="пятница" />
+          <DateTablet onClick={()=>setActiveDay(6)} isSelected={activeDay === 6} date="20 мая" day="суббота" />
+          <DateTablet onClick={()=>setActiveDay(7)} isSelected={activeDay === 7} date="21 мая" day="воскресенье" />
         </div>
         <AnimeTimetable anime={animeTimes} />
       </section>
