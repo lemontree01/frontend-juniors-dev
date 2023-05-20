@@ -115,6 +115,13 @@ const TopPage = () => {
         ))}
       </div>
     </div>
+
+    <div className="comments">
+      <h3>Коментарии</h3>
+      <div className="comments__box">
+        
+      </div>
+    </div>
   </div>;
 };
 
