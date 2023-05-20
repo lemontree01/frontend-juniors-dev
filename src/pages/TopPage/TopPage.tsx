@@ -9,7 +9,7 @@ import Kadr3 from '../../assets/topPage/kadr3.png'
 import Kadr4 from '../../assets/topPage/kadr4.png'
 import video from '../../assets/topPage/video.png'
 import ButtonUI from "../../components/ui/ButtonUI/ButtonUI";
-import { products } from "../../pages/topPage/products";
+import { products } from "./products";
 
 
 const TopPage = () => {
@@ -106,7 +106,7 @@ const TopPage = () => {
     <div className="simular">
       <h2>Связанные</h2>
       <div className="simular__cards">
-        {products.map((item) => (
+        {products.map((item: any) => (
           <div className="simular__card" key={item.id}>
             <img src={item.image} alt="" className="simular__image" />
             <p>{item.paragraph}</p>
