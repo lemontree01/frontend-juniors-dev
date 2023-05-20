@@ -8,15 +8,56 @@ import Kadr2 from '../../assets/topPage/kadr2.png'
 import Kadr3 from '../../assets/topPage/kadr3.png'
 import Kadr4 from '../../assets/topPage/kadr4.png'
 import video from '../../assets/topPage/video.png'
+import userLogo from '../../assets/topPage/user-logo.png'
+import threeDots from '../../assets/topPage/threedots.png'
+import userLogo2 from '../../assets/topPage/userLogo1.png'
+import userLogo3 from '../../assets/topPage/userLogo2.png'
+import userLogo4 from '../../assets/topPage/userLogo3.png'
+
 import ButtonUI from "../../components/ui/ButtonUI/ButtonUI";
-import { products } from "./products";
+import { products } from "../../pages/topPage/products";
 
 
 const TopPage = () => {
   const [searchEpisode, setSearchEpisode] = useState(0)
+  const [answer, setAnswer] = useState(false)
+  const [answer2, setAnswer2] = useState(false)
+  const [answer3, setAnswer3] = useState(false)
+  const [answer4, setAnswer4] = useState(false)
+
+
 
   const handleEpisode = (e: any) => {
     setSearchEpisode(e.target.value)
+  }
+
+  const handleClick = () => {
+    if (!answer) {
+      setAnswer(true)
+    } else {
+      setAnswer(false)
+    }
+  }
+  const handleClick2 = () => {
+    if (!answer2) {
+      setAnswer2(true)
+    } else {
+      setAnswer2(false)
+    }
+  }
+  const handleClick3 = () => {
+    if (!answer3) {
+      setAnswer3(true)
+    } else {
+      setAnswer3(false)
+    }
+  }
+  const handleClick4 = () => {
+    if (!answer4) {
+      setAnswer4(true)
+    } else {
+      setAnswer4(false)
+    }
   }
 
   return <div>
@@ -113,6 +154,83 @@ const TopPage = () => {
             <h3>{item.title}</h3>
           </div>
         ))}
+      </div>
+    </div>
+
+    <div className="comments">
+      <h3>Коментарии</h3>
+      <div className="comments__box">
+        <div className="comments__box-user">
+          <img src={userLogo} alt="" />
+          <div className="comments__userName">
+            <div>
+              <h5>Yarunov
+              </h5>
+              <li>день назад</li>
+            </div>
+            <h4>Пните,когда второй сезон выйдет</h4>
+            <div className="comments__answer">
+              <button onClick={handleClick}>Ответить
+                <img src={threeDots} alt="" />
+              </button>
+            </div>
+            {answer ? (<input type="text" />) : null}
+          </div>
+
+        </div>
+        <hr />
+        <div className="comments__box-user">
+          <img src={userLogo2} alt="" />
+          <div className="comments__userName">
+            <div>
+              <h5>Yunnnn </h5>
+              <li>день назад</li>
+            </div>
+            <h4>Лучший сёнен на моей памяти. 9 из 10</h4>
+            <div className="comments__answer">
+              <button onClick={handleClick2}>Ответить
+                <img src={threeDots} alt="" />
+              </button>
+            </div>
+            {answer2 ? (<input type="text" />) : null}
+          </div>
+        </div>
+        <hr />
+        <div className="comments__box-user">
+          <img src={userLogo3} alt="" />
+          <div className="comments__userName">
+            <div>
+              <h5>Sunoo
+              </h5>
+              <li>2 дня назад </li>
+            </div>
+            <h4>Как говорится, можете дизить, но мне не понравилось.</h4>
+            <div className="comments__answer">
+              <button onClick={handleClick3}>Ответить
+                <img src={threeDots} alt="" />
+              </button>
+            </div>
+            {answer3 ? (<input type="text" />) : null}
+          </div>
+        </div>
+        <div className="comments__box-user">
+          <img src={userLogo4} alt="" />
+          <div className="comments__userName">
+            <div>
+              <h5>dxfcghnjkml 
+              </h5>
+              <li>3 дня назад </li>
+            </div>
+            <h4>Какую лучше озвучку выбрать?</h4>
+            <div className="comments__answer">
+              <button onClick={handleClick4}>Ответить
+                <img src={threeDots} alt="" />
+              </button>
+            </div>
+            {answer4 ? (<input type="text" />) : null}
+          </div>
+        </div>
+        <hr />
       </div>
     </div>
   </div>;
