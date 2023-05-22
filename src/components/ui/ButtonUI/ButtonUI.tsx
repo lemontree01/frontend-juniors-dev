@@ -11,6 +11,7 @@ interface ButtonProps {
   variant?: string;
   size?: string;
   children?: React.ReactChild | React.ReactNode;
+  onClick?: () => void;
 }
 
 const ButtonUI: FC<PropsWithChildren<ButtonProps>> = ({
@@ -18,6 +19,7 @@ const ButtonUI: FC<PropsWithChildren<ButtonProps>> = ({
   variant,
   size,
   children,
+  onClick,
 }: ButtonProps) => {
   const [proportion, setProportion] = useState<string>("");
   const [background, setBackground] = useState<string>("");
@@ -44,6 +46,7 @@ const ButtonUI: FC<PropsWithChildren<ButtonProps>> = ({
 
   return (
     <button
+      onClick={onClick}
       style={style}
       className={[proportion, background].join(" ")}
     >

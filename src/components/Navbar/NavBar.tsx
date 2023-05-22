@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.scss";
 import Logo from "../../assets/logo.svg";
 import Glass from "../../assets/search-glass.svg";
 import Switcher from "../../assets/theme-switcher.svg";
 import { useLocation, useNavigate } from "react-router";
 import ButtonUI from "../ui/ButtonUI/ButtonUI";
+import AuthModal from "../Auth/AuthModal";
 
 const Header = () => {
   const navigate = useNavigate();
 
   const location = useLocation();
+
+  const [signIn, setSignIn] = useState<boolean>(false);
+  const [signUp, setSignUp] = useState<boolean>(false);
 
   return (
     <div className="navbar">
@@ -59,6 +63,7 @@ const Header = () => {
       <div className="navbar__btns">
         <div className="navbar__auth_btns">
           <ButtonUI
+            onClick={() => setSignIn(!signIn)}
             style={{
               padding: "12px 22px",
               border: "1.5px solid #F2EFFF",
@@ -67,7 +72,9 @@ const Header = () => {
           >
             Войти
           </ButtonUI>
-          <ButtonUI>Регистрация</ButtonUI>
+          <ButtonUI onClick={() => setSignUp(!signUp)}>
+            Регистрация
+          </ButtonUI>
         </div>
         <img
           id="navbar__switch_btn"
@@ -75,6 +82,11 @@ const Header = () => {
           alt="switch-img"
         />
       </div>
+      {signIn ? (
+        <AuthModal signIn={signIn} />
+      ) : signUp ? (
+        <AuthModal signUp={signUp} />
+      ) : null}
     </div>
   );
 };

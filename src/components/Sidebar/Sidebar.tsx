@@ -99,8 +99,14 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar__filter_btns">
-        <ButtonUI size="big">Показать</ButtonUI>
-        <ButtonUI size="big" variant="outlined">
+        <ButtonUI style={{ maxWidth: "282px" }} size="big">
+          Показать
+        </ButtonUI>
+        <ButtonUI
+          style={{ maxWidth: "282px" }}
+          size="big"
+          variant="outlined"
+        >
           Сбросить
         </ButtonUI>
       </div>

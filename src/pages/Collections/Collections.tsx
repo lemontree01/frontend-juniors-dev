@@ -10,6 +10,7 @@ import Component23 from "../../assets/collectionsPage/Component 23.png";
 import Component24 from "../../assets/collectionsPage/Component 24.png";
 import Component25 from "../../assets/collectionsPage/Component 25.png";
 import Component26 from "../../assets/collectionsPage/Component 26.png";
+import AuthModal from "../../components/Auth/AuthModal";
 
 const Collections = () => {
   return (
@@ -26,6 +27,7 @@ const Collections = () => {
         <img src={Component25} />
         <img src={Component26} />
       </section>
+      <AuthModal />
     </main>
   );
 };
