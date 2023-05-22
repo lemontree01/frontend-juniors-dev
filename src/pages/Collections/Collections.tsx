@@ -27,7 +27,6 @@ const Collections = () => {
         <img src={Component25} />
         <img src={Component26} />
       </section>
-      <AuthModal />
     </main>
   );
 };
