@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./main.scss";
 import Header from "../../components/ui/Header/Header";
 import IdolChild from "../../assets/asd.jpg";
@@ -12,9 +12,9 @@ import RightSlider from "../../assets/sliders/slider-right.png";
 import CatalogueCard from "../../components/ui/CatalogueCard/CatalogueCard";
 import DateTablet from "../../components/ui/DateTablet/DateTablet";
 import AnimeTimetable from "../../components/ui/AnimeTimetable/AnimeTimetable";
-import TopComedy from "../../assets/mainPage/top-comedy.png"
-import TopRomance from "../../assets/mainPage/top-romance.png"
-import TopHorror from "../../assets/mainPage/top-horror.png"
+import TopComedy from "../../assets/mainPage/top-comedy.png";
+import TopRomance from "../../assets/mainPage/top-romance.png";
+import TopHorror from "../../assets/mainPage/top-horror.png";
 import { Link, useNavigate } from "react-router-dom";
 
 //to-do
@@ -23,9 +23,8 @@ const moveLeft = () => {};
 const moveRight = () => {};
 
 const Main = () => {
-
-  const navigate = useNavigate()
-  const [activeDay, setActiveDay] = useState(1)
+  const navigate = useNavigate();
+  const [activeDay, setActiveDay] = useState(1);
   const animeTimes: {
     time: string;
     name: string;
@@ -56,16 +55,28 @@ const Main = () => {
     },
   ];
 
+
   return (
     <main className="main-page">
       <section className="main-page__lastly-uploaded lastly-uploaded">
         <Header>Последние обновления</Header>
         <div className="lastly-uploaded__anime-wrapper">
           <AnimeCard name="Ребенок идола" lastEpisode={8} img={I1} />
-          <AnimeCard name="Идолмастер: Девушки-золушки — U149" lastEpisode={8} img={I2} />
-          <AnimeCard name="Юри — это моя работа!" lastEpisode={8} img={I3} />
-          <AnimeCard name="Я не посредственность, я просто дикий монстр" lastEpisode={8} img={I4} />
-         
+          <AnimeCard
+            name="Идолмастер: Девушки-золушки — U149"
+            lastEpisode={8}
+            img={I2}
+          />
+          <AnimeCard
+            name="Юри — это моя работа!"
+            lastEpisode={8}
+            img={I3}
+          />
+          <AnimeCard
+            name="Я не посредственность, я просто дикий монстр"
+            lastEpisode={8}
+            img={I4}
+          />
         </div>
       </section>
       <section className="main-page__season-anime season-anime">
@@ -103,13 +114,48 @@ const Main = () => {
       <section className="main-page__relase-date release-date">
         <Header>Дата выхода аниме</Header>
         <div className="release-date__days">
-          <DateTablet onClick={()=>setActiveDay(1)} isSelected={activeDay === 1} date="15 мая" day="понедельник" />
-          <DateTablet onClick={()=>setActiveDay(2)} isSelected={activeDay === 2} date="16 мая" day="вторник" />
-          <DateTablet onClick={()=>setActiveDay(3)} isSelected={activeDay === 3} date="17 мая" day="среда" />
-          <DateTablet onClick={()=>setActiveDay(4)} isSelected={activeDay === 4} date="18 мая" day="четверг" />
-          <DateTablet onClick={()=>setActiveDay(5)} isSelected={activeDay === 5} date="19 мая" day="пятница" />
-          <DateTablet onClick={()=>setActiveDay(6)} isSelected={activeDay === 6} date="20 мая" day="суббота" />
-          <DateTablet onClick={()=>setActiveDay(7)} isSelected={activeDay === 7} date="21 мая" day="воскресенье" />
+          <DateTablet
+            onClick={() => setActiveDay(1)}
+            isSelected={activeDay === 1}
+            date="15 мая"
+            day="понедельник"
+          />
+          <DateTablet
+            onClick={() => setActiveDay(2)}
+            isSelected={activeDay === 2}
+            date="16 мая"
+            day="вторник"
+          />
+          <DateTablet
+            onClick={() => setActiveDay(3)}
+            isSelected={activeDay === 3}
+            date="17 мая"
+            day="среда"
+          />
+          <DateTablet
+            onClick={() => setActiveDay(4)}
+            isSelected={activeDay === 4}
+            date="18 мая"
+            day="четверг"
+          />
+          <DateTablet
+            onClick={() => setActiveDay(5)}
+            isSelected={activeDay === 5}
+            date="19 мая"
+            day="пятница"
+          />
+          <DateTablet
+            onClick={() => setActiveDay(6)}
+            isSelected={activeDay === 6}
+            date="20 мая"
+            day="суббота"
+          />
+          <DateTablet
+            onClick={() => setActiveDay(7)}
+            isSelected={activeDay === 7}
+            date="21 мая"
+            day="воскресенье"
+          />
         </div>
         <AnimeTimetable anime={animeTimes} />
       </section>
@@ -117,11 +163,14 @@ const Main = () => {
       <section className="best-collections">
         <Header>Лучшие коллекции</Header>
         <div className="best-collections__wrap">
-          <img src={TopComedy}/>
-          <img src={TopHorror}/>
-          <img src={TopRomance}/>
+          <img src={TopComedy} />
+          <img src={TopHorror} />
+          <img src={TopRomance} />
         </div>
-        <div onClick={()=>navigate("/collections")} className="best-collections__button">
+        <div
+          onClick={() => navigate("/collections")}
+          className="best-collections__button"
+        >
           Перейти в коллекции
         </div>
       </section>
