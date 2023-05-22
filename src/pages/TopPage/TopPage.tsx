@@ -15,7 +15,7 @@ import userLogo3 from '../../assets/topPage/userLogo2.png'
 import userLogo4 from '../../assets/topPage/userLogo3.png'
 
 import ButtonUI from "../../components/ui/ButtonUI/ButtonUI";
-import { products } from "../../pages/topPage/products";
+import { products } from "./products";
 
 
 const TopPage = () => {

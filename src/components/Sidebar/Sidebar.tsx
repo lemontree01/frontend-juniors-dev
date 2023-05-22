@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ChooseButtonUI from "../ui/ChooseButton/ChooseButtonUI";
 import ButtonUI from "../ui/ButtonUI/ButtonUI";
 import CheckboxUI from "../ui/Checkbox/CheckboxUI";
@@ -11,8 +11,11 @@ import {
   SIDEBAR_GENRES,
   SIDEBAR_STATUS,
 } from "./variables";
+import Slider from "react-slider";
 
 const Sidebar = () => {
+  const [values, setValues] = useState<number[]>([1990, 2023]);
+
   return (
     <div className="catalog__content_sidebar">
       <div className="sidebar__filter_title">
@@ -24,7 +27,18 @@ const Sidebar = () => {
 
       <div className="sidebar__filter_date">
         <span>Год выпуска</span>
-        <input type="range" />
+        <Slider
+          onChange={setValues}
+          className={"slider"}
+          value={values}
+          min={1990}
+          max={2023}
+          pearling
+          minDistance={1}
+          renderThumb={(props, state) => (
+            <div {...props}>{state.valueNow}</div>
+          )}
+        />
       </div>
 
       <div className="sidebar__filter_genres">
