@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+    position: relative;
 
     h2 {
       font-weight: 700;
@@ -13,33 +14,19 @@
       color: white;
     }
 
-    .catalog__header_sort {
-      width: 233px;
-      height: 65px;
-      background-color: #16171f;
-      border-radius: 20px;
-
-      font-size: 24px;
-      font-weight: 600;
-      color: white;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    
   }
 
   .catalog__content {
     display: flex;
     justify-content: space-between;
 
-    
-
     .catalog__content_cards {
       width: 72%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      z-index: -1;
     }
   }
 }

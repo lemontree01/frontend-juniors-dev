@@ -9,7 +9,7 @@ import Kadr3 from '../../assets/topPage/kadr3.png'
 import Kadr4 from '../../assets/topPage/kadr4.png'
 import video from '../../assets/topPage/video.png'
 import ButtonUI from "../../components/ui/ButtonUI/ButtonUI";
-import { products } from "../../pages/topPage/products";
+import { products } from "./products";
 
 
 const TopPage = () => {

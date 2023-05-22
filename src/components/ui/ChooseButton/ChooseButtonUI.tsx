@@ -18,7 +18,7 @@ const ChooseButtonUI: FC<PropsWithChildren<ChooseButtonProps>> = ({
 
   const setStyle = () => {
     if (toggle) {
-      setActive("active");
+      setActive("active1");
     } else {
       setActive("");
     }
