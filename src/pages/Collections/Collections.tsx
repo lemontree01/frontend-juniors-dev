@@ -1,16 +1,7 @@
-import React, { useState } from "react";
-import "./collections.scss";
-import Slider from "react-slider";
-
-
+import React from "react";
 
 const Collections = () => {
-
-  return (
-    <div className="app">
-      
-    </div>
-  );
+  return <div>Collections</div>;
 };
 
 export default Collections;
