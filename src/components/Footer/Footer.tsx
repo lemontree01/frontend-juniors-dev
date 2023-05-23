@@ -13,7 +13,8 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='footer__right'>
-        <img
+        <img 
+        className='footer__logo'
           onClick={() => navigate("/main")}
           src={Logo}
           alt="logo-img"

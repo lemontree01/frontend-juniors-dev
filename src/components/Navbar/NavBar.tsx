@@ -1,28 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.scss";
 import Logo from "../../assets/logo.svg";
 import Glass from "../../assets/search-glass.svg";
 import Switcher from "../../assets/theme-switcher.svg";
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import ButtonUI from "../ui/ButtonUI/ButtonUI";
-import AuthModal from "../Auth/AuthModal";
+import AuthToSignIn from "../AuthModals/AuthToSignIn";
+import AuthToSignUp from "../AuthModals/AuthToSignUp";
 
 const Header = () => {
   const navigate = useNavigate();
 
-  const location = useLocation();
-
   const [signIn, setSignIn] = useState<boolean>(false);
   const [signUp, setSignUp] = useState<boolean>(false);
+
+  const openSignIn = () => {
+    if (signUp) {
+      setSignUp(false);
+      setSignIn(!signIn);
+    } else {
+      setSignIn(!signIn);
+    }
+  };
+
+  const openSignUp = () => {
+    if (signIn) {
+      setSignIn(false);
+      setSignUp(!signUp);
+    } else {
+      setSignUp(!signUp);
+    }
+  };
 
   return (
     <div className="navbar">
       <img
+        className="navbar__logo"
         onClick={() => navigate("/main")}
         src={Logo}
         alt="logo-img"
       />
-
       <div className="navbar__selections">
         <span
           className={
@@ -55,7 +72,6 @@ const Header = () => {
           Коллекции
         </span>
       </div>
-
       <div className="navbar__search_input">
         <input placeholder="Поиск" type="text" />
         <img id="navbar__search_btn" src={Glass} alt="glass-img" />
@@ -63,16 +79,22 @@ const Header = () => {
       <div className="navbar__btns">
         <div className="navbar__auth_btns">
           <ButtonUI
-            onClick={() => setSignIn(!signIn)}
             style={{
               padding: "12px 22px",
               border: "1.5px solid #F2EFFF",
+              margin: "0",
             }}
             variant="outlined"
+            onClick={openSignIn}
           >
             Войти
           </ButtonUI>
-          <ButtonUI onClick={() => setSignUp(!signUp)}>
+          <ButtonUI
+            onClick={openSignUp}
+            style={{
+              margin: "0",
+            }}
+          >
             Регистрация
           </ButtonUI>
         </div>
@@ -82,11 +104,8 @@ const Header = () => {
           alt="switch-img"
         />
       </div>
-      {signIn ? (
-        <AuthModal signIn={signIn} />
-      ) : signUp ? (
-        <AuthModal signUp={signUp} />
-      ) : null}
+      {signIn ? <AuthToSignIn signInFunc={setSignIn} /> : null}
+      {signUp ? <AuthToSignUp signUpFunc={setSignUp} /> : null}
     </div>
   );
 };
