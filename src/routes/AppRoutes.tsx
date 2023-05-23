@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Navigate, Route, Routes } from "react-router";
 import Main from "../pages/Main/Main";
@@ -8,6 +7,7 @@ import AnimePage from "../pages/AnimePage/AnimePage";
 import Profile from "../pages/Profile/Profile";
 import Login from "../pages/Login/Login";
 import TopPage from "../pages/TopPage/TopPage";
+import Test from "../pages/Test";
 
 const AppRoutes = () => {
   return (
@@ -19,6 +19,7 @@ const AppRoutes = () => {
       <Route path="/anime-page" element={<AnimePage />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/test-page" element={<Test />} />
       <Route path="*" element={<Navigate to="/main" />} />
     </Routes>
   );
